@@ -1,2 +1,4 @@
 images
 .ipynb_checkpoints
+*.py[co]
+
