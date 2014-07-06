@@ -6,7 +6,6 @@ def ngrams_parallel(view, fnames, n=1):
     """
 
     ar = view.map_async(ngrams, fnames, [n] * len(fnames))
-    freqs_list = ar.get()
     counts = {}
     for engine_count in ar:
         for gram, count in engine_count.items():
